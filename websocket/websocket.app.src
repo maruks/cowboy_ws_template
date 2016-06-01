@@ -1,0 +1,18 @@
+{application, {{name}}, [
+	{description, "Cowboy websocket {{name}} server."},
+	{vsn, "1"},
+	{modules, []},
+	{registered, [{{name}}_sup]},
+	{applications, [
+		kernel,
+		stdlib,
+		lager,
+		crypto,
+		ranch,
+		cowlib,
+		cowboy,
+		jsx
+	]},
+
+	{mod, { {{name}}_app, []}},
+	{env, []}]}.
