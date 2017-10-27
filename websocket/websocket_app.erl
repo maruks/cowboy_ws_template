@@ -1,18 +1,15 @@
-%% @private
 -module({{name}}_app).
 -behaviour(application).
 
-%% API.
 -export([start/2]).
 -export([stop/1]).
 
-%% API.
 start(_Type, _Args) ->
         {ok, PortNum} = application:get_env(port),
 	Dispatch = cowboy_router:compile([
 		{'_', [
 			{"/", cowboy_static, {priv_file, {{name}}, "index.html"}},
-			{"/websocket", ws_handler, []},
+			{"/websocket", {{name}}_ws_handler, []},
 			{"/static/[...]", cowboy_static, {priv_dir, {{name}}, "static"}}
 		]}
 	]),

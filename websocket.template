@@ -10,7 +10,9 @@
 {template, "websocket/websocket.app.src", "{{name}}/src/{{name}}.app.src"}.
 {template, "websocket/websocket_sup.erl", "{{name}}/src/{{name}}_sup.erl"}.
 {template, "websocket/websocket_app.erl", "{{name}}/src/{{name}}_app.erl"}.
-{template, "websocket/ws_handler.erl", "{{name}}/src/ws_handler.erl"}.
+{template, "websocket/websocket_gen_server.erl", "{{name}}/src/{{name}}_gen_server.erl"}.
+{template, "websocket/websocket_gen_server_test.erl", "{{name}}/test/{{name}}_gen_server_test.erl"}.
+{template, "websocket/websocket_ws_handler.erl", "{{name}}/src/{{name}}_ws_handler.erl"}.
 
 {template, "websocket/sys.config", "{{name}}/config/sys.config"}.
 {template, "websocket/vm.args", "{{name}}/config/vm.args"}.
