@@ -12,7 +12,7 @@
 
 hello() ->
     Reply = gen_server:call(test, {hello, <<"hi">>}),
-    ?assertEqual(Reply, <<"That's what she said! hi">>).
+    [?_assertEqual(Reply, <<"That's what she said! hi">>)].
 
 setup() ->
     {ok, _} = gen_server:start({local, test}, {{name}}_gen_server, [], []).
